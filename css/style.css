@@ -1,0 +1,377 @@
+/* =========================
+   Base
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1b3b2b;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.hero-inner {
+  width: min(1560px, calc(100% - 120px));
+  margin: 0 auto;
+  padding-top: 210px;
+}
+
+.hero-logo {
+  width: 430px;
+  margin-bottom: 48px;
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-title {
+  margin: 0 0 38px;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+  background: #ffffff;
+}
+
+.introduction .section-inner {
+  width: min(1560px, calc(100% - 120px));
+  margin: 0 auto;
+  padding: 160px 0 180px;
+}
+
+.section-label {
+  margin: 0 0 48px;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+}
+
+.introduction-title {
+  margin: 0 0 64px;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+
+.introduction-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+/* =====================
+   SERVICE
+===================== */
+
+.service {
+  background: #ffffff;
+}
+
+.service .section-inner {
+  padding: 170px 0 190px;
+  margin-left: 410px;
+  margin-right: 210px;
+}
+
+.service-heading {
+  margin-bottom: 130px;
+}
+
+.service-title {
+  margin: 38px 0 0;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.service-item {
+  border-top: 1px solid #163c2d;
+  padding-top: 24px;
+}
+
+.service-number {
+  margin: 0 0 48px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+.service-item h3 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.service-item > p:last-child {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+/* =====================
+   WORKS
+===================== */
+
+.works {
+  background: #ffffff;
+}
+
+.works .section-inner {
+  padding: 180px 0;
+  margin-left: 410px;
+  margin-right: 210px;
+}
+
+.works-heading {
+  margin-bottom: 70px;
+}
+
+.works-title {
+  margin: 38px 0 0;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+}
+
+.works-item {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 60px;
+  align-items: end;
+}
+
+.works-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.works-info {
+  padding-bottom: 24px;
+}
+
+.works-info h3 {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.works-info p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-inner {
+  width: min(1100px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.contact .section-label {
+  margin: 0 0 36px;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+}
+
+.contact-title {
+  margin: 0 0 40px;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+}
+
+.contact-text {
+  margin: 0 0 64px;
+  font-size: 17px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+}
+
+.contact-link {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid currentColor;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  color: inherit;
+}
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero-inner {
+  width: auto;
+  margin: 0;
+  padding: 90px 28px 0;
+}
+
+.hero-logo {
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 36px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  margin-bottom: 26px;
+}
+
+.hero-subtitle {
+  font-size: 13px;
+}
+
+.introduction .section-inner {
+  width: auto;
+  margin: 0;
+  padding: 100px 28px 120px;
+}
+
+.introduction-title {
+  font-size: 28px;
+  line-height: 1.75;
+}
+
+.introduction-text {
+  font-size: 15px;
+}
+.service .section-inner {
+  padding: 120px 28px 140px;
+  margin: 0;
+}
+
+.service-heading {
+  margin-bottom: 70px;
+}
+
+.service-title {
+  font-size: 28px;
+}
+
+.service-list {
+  grid-template-columns: 1fr;
+  gap: 52px;
+}
+
+.service-item {
+  padding-top: 18px;
+}
+
+.service-number {
+  margin-bottom: 24px;
+}
+
+.service-item h3 {
+  font-size: 18px;
+}
+/* =========================
+   WORKS - MOBILE
+========================= */
+
+.works {
+  min-height: auto;
+}
+
+.works .section-inner {
+  width: auto;
+  margin: 0;
+  padding: 120px 28px;
+}
+
+.works-heading {
+  margin-bottom: 50px;
+}
+
+.works-title {
+  font-size: 28px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.works-item {
+  display: block;
+}
+
+.works-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.works-info {
+  margin: 0;
+  width: 100%;
+}
+
+.works-name {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.works-category {
+  font-size: 11px;
+}
+}
