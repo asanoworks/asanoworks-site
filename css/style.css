@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
+  background: #faf9f6;
   color: #1b3b2b;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -26,7 +26,25 @@ body {
   position: relative;
   width: 100%;
   min-height: 75vh;
-  background: #ffffff;
+
+  background-color: #faf9f5;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(27, 59, 43, 0.015) 0,
+      rgba(27, 59, 43, 0.015) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(27, 59, 43, 0.012) 0,
+      rgba(27, 59, 43, 0.012) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
   overflow: hidden;
 }
 
@@ -222,6 +240,7 @@ body {
 
 .about {
   padding: 160px 0;
+  background: #faf9f6;
 }
 
 .about-inner {
@@ -264,7 +283,8 @@ body {
   min-height: 70vh;
   display: flex;
   align-items: center;
-  padding-bottom: 80px;
+  padding: 160px 0 80px;
+  background: #ffffff;
 }
 
 .contact-inner {
@@ -349,6 +369,7 @@ body {
 
 .flow {
   padding: 160px 0;
+  background: #faf9f6;
 }
 
 .flow .section-inner {
@@ -408,6 +429,7 @@ body {
 .site-footer {
   padding: 120px 0 60px;
   text-align: center;
+  background: #ffffff;
 }
 
 .footer-logo {
