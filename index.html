@@ -34,8 +34,8 @@
 </div>
 
         <h1 class="hero-title">
-          やりたいことから、はじめよう。
-        </h1>
+  やりたいことから、<br class="sp-only">はじめよう。
+</h1>
 
         <p class="hero-subtitle">
           WEB DESIGN / DEVELOPMENT
@@ -56,7 +56,7 @@
     </h2>
 
     <p class="introduction-text">
-      asanoworksは、そんなところから一緒に考えます。<br>
+      asanoworksは、そこから一緒に考えます。<br>
       話を聞き、整理して、あなたの仕事に合ったWebサイトを形にします。
     </p>
 
@@ -79,9 +79,9 @@
       </div>
 
       <div class="service-item">
-        <p class="service-number">02</p>
-        <h3>CREATIVE</h3>
-        <p class="service-name">画像・ビジュアル制作</p>
+       <p class="service-number">02</p>
+       <h3>IMPROVEMENT</h3>
+       <p class="service-name">ホームページ修正・改善</p>
       </div>
 
       <div class="service-item">
@@ -106,13 +106,13 @@
 
       <div class="works-image">
         <img
-          src="images/atelier-rombus.jpg"
-          alt="atelier Rombus Webサイト制作"
+          src="images/atelier-rhombus.jpg"
+          alt="atelier Rhombus Webサイト制作"
         >
       </div>
 
       <div class="works-info">
-        <h3>atelier Rombus</h3>
+        <h3>atelier Rhombus</h3>
         <p>WEB DESIGN / 2026</p>
       </div>
 
@@ -120,26 +120,135 @@
 
   </div>
 </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-inner">
+
+      <p class="section-label">ABOUT</p>
+
+      <h2 class="about-title">
+        つくる人。
+      </h2>
+
+      <div class="about-content">
+        <p class="about-text">
+          Webサイトをつくっています。<br>
+          まず話を聞いて、必要なものを一緒に考える。<br>
+          つくることより、ちゃんと役に立つことを大切にしています。
+        </p>
+
+        <p class="about-name">
+          asanoworks / Yoshikazu Asano<br>
+          宮城県在住
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+<section class="flow" id="flow">
+  <div class="section-inner">
+
+    <p class="section-label">FLOW</p>
+
+    <h2 class="section-title">
+      できるまで。
+    </h2>
+
+    <div class="flow-list">
+
+      <div class="flow-item">
+        <span class="flow-number">01</span>
+        <h3>相談</h3>
+        <p>まずは、やりたいことや困っていることを聞かせてください。</p>
+      </div>
+
+      <div class="flow-item">
+        <span class="flow-number">02</span>
+        <h3>ヒアリング</h3>
+        <p>目的や必要な内容を整理して、サイトの方向を一緒に考えます。</p>
+      </div>
+
+      <div class="flow-item">
+        <span class="flow-number">03</span>
+        <h3>制作</h3>
+        <p>内容が決まったら、デザインと制作を進めます。</p>
+      </div>
+
+      <div class="flow-item">
+        <span class="flow-number">04</span>
+        <h3>確認・調整</h3>
+        <p>実際の画面を見ながら、必要なところを整えていきます。</p>
+      </div>
+
+      <div class="flow-item">
+        <span class="flow-number">05</span>
+        <h3>公開</h3>
+        <p>最終確認のあと、Webサイトを公開します。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-number">06</span>
+        <h3>更新・サポート</h3>
+        <p>公開後も、必要に応じて更新や改善をサポートします。</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="contact-inner">
 
     <p class="section-label">CONTACT</p>
 
     <h2 class="contact-title">
-      話すところから、はじめよう。
-    </h2>
+  話すところから、<br>
+  はじめよう。
+</h2>
 
     <p class="contact-text">
       Webサイトのこと、デザインのこと。<br>
       まだ形になっていない段階でも大丈夫です。
     </p>
 
-    <a class="contact-link" href="mailto:">
-      お問い合わせ →
-    </a>
+    <form
+  class="contact-form"
+  action="https://formspree.io/f/xdenbwvn"
+  method="POST"
+>
+  <div class="form-group">
+    <label for="name">お名前</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">メールアドレス</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">ご相談内容</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit" class="contact-submit">
+    送信する →
+  </button>
+</form>
 
   </div>
 </section>
+<footer class="site-footer">
+  <img
+    src="images/logo_horizontal_green_asagara.png"
+    alt="asanoworks"
+    class="footer-logo"
+  >
+  <p class="footer-copy">© asanoworks</p>
+</footer>
   </main>
 
   <script src="js/main.js"></script>
