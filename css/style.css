@@ -444,6 +444,21 @@ body {
   letter-spacing: 0.12em;
 }
 /* =========================
+   TABLET
+========================= */
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  .service .section-inner,
+  .works .section-inner {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .service-list {
+    gap: 40px;
+  }
+}
+/* =========================
    MOBILE
 ========================= */
 
