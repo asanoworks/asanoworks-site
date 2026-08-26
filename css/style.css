@@ -116,6 +116,28 @@ body {
   line-height: 2;
   letter-spacing: 0.05em;
 }
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+  background: #ffffff;
+}
+
+.price .section-inner {
+  width: min(1560px, calc(100% - 120px));
+  margin: 0 auto;
+  padding: 160px 0 180px;
+}
+
+.price-title {
+  margin: 0 0 80px;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
 /* =====================
    SERVICE
 ===================== */
@@ -443,6 +465,223 @@ body {
   font-size: 12px;
   letter-spacing: 0.12em;
 }
+
+.footer-copy {
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price-card {
+  margin-top: 80px;
+  padding: 64px;
+  border: 1px solid rgba(18, 64, 48, 0.18);
+  background: #fff;
+}
+
+.price-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(18, 64, 48, 0.18);
+}
+
+.price-service {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+
+.price-amount {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.price-amount span {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.price-description {
+  margin: 40px 0 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.price-details {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(18, 64, 48, 0.12);
+}
+
+.price-details-title {
+  margin: 0 0 24px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.price-details-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.price-details-list li::before {
+  content: "—";
+  margin-right: 10px;
+}
+
+.price-period {
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(18, 64, 48, 0.12);
+  font-size: 14px;
+}
+
+.price-note {
+  margin: 24px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+.price-option {
+  margin-top: 100px;
+}
+
+.price-option-label {
+  margin: 0 0 32px;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+
+.price-option-list {
+  border-top: 1px solid rgba(18, 64, 48, 0.18);
+}
+
+.price-option-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(18, 64, 48, 0.18);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.price-option-item span:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-maintenance {
+  margin-top: 100px;
+  padding: 48px 0;
+  border-top: 1px solid rgba(18, 64, 48, 0.18);
+  border-bottom: 1px solid rgba(18, 64, 48, 0.18);
+}
+
+.price-maintenance-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.price-maintenance-label {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+
+.price-maintenance-amount {
+  margin: 0;
+  font-size: 14px;
+}
+
+.price-maintenance-amount span {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.price-maintenance-description {
+  margin: 32px 0 0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.price-maintenance-note {
+  margin: 24px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.price-contact {
+  margin-top: 140px;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.price-contact-label {
+  margin: 0 0 32px;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+
+.price-contact-title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.price-contact-text {
+  margin: 32px 0 0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.price-contact-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.price-payment {
+  padding: 32px 0 80px;
+  border-top: 1px solid rgba(18, 64, 48, 0.18);
+}
+
+.price-payment-title {
+  margin: 0 0 16px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.price-payment-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.9;
+  opacity: 0.7;
+}
 /* =========================
    TABLET
 ========================= */
@@ -652,4 +891,133 @@ body {
     grid-column: 2;
     font-size: 13px;
   }
+}
+  /* PRICE */
+
+  .price .section-inner {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+
+  .price-card {
+    margin-top: 56px;
+    padding: 32px 24px;
+  }
+
+  .price-card-head {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  .price-service {
+    margin-bottom: 20px;
+  }
+
+  .price-amount {
+    text-align: left;
+  }
+
+  .price-amount span {
+    font-size: 36px;
+  }
+
+  .price-description {
+    margin-top: 32px;
+  }
+
+  .price-description br {
+    display: none;
+  }
+
+  .price-details {
+    margin-top: 36px;
+    padding-top: 28px;
+  }
+
+  .price-details-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .price-period {
+    margin-top: 36px;
+  }
+
+  .price-note br {
+    display: none;
+  }
+
+  .price-option {
+    margin-top: 72px;
+  }
+
+  .price-option-item {
+    gap: 20px;
+    padding: 20px 0;
+    font-size: 13px;
+  }
+
+  .price-option-item span:last-child {
+    text-align: right;
+  }
+
+  .price-maintenance {
+    margin-top: 72px;
+    padding: 40px 0;
+  }
+
+  .price-maintenance-head {
+    display: block;
+  }
+
+  .price-maintenance-label {
+    margin-bottom: 20px;
+  }
+
+  .price-maintenance-amount span {
+    font-size: 28px;
+  }
+
+  .price-maintenance-description br {
+    display: none;
+  }
+
+  .price-contact {
+    margin-top: 96px;
+    padding: 64px 0;
+  }
+
+  .price-contact-title {
+    font-size: 26px;
+  }
+
+  .price-contact-text br {
+    display: none;
+  }
+
+  .price-payment {
+    padding-bottom: 60px;
+  }
+
+  .price-payment-text br {
+    display: none;
+  }
+
+  /* =========================
+   SERVICE PRICE LINK
+========================= */
+
+.service-price-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #123f30;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(18, 64, 48, 0.45);
+  padding-bottom: 3px;
+  transition: opacity 0.3s ease;
+}
+
+.service-price-link:hover {
+  opacity: 0.6;
 }
