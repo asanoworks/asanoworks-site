@@ -126,9 +126,9 @@ body {
 }
 
 .price .section-inner {
-  width: min(1560px, calc(100% - 120px));
-  margin: 0 auto;
   padding: 160px 0 180px;
+  margin-left: 410px;
+  margin-right: 210px;
 }
 
 .price-title {
@@ -891,8 +891,8 @@ body {
     grid-column: 2;
     font-size: 13px;
   }
-}
-  /* PRICE */
+
+   /* PRICE */
 
   .price .section-inner {
     margin-left: 28px;
@@ -1002,6 +1002,7 @@ body {
   .price-payment-text br {
     display: none;
   }
+}
 
   /* =========================
    SERVICE PRICE LINK
