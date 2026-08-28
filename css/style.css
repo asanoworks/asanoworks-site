@@ -49,11 +49,20 @@ body {
 }
 
 .hero-inner {
+  position: relative;
   width: min(1560px, calc(100% - 120px));
   margin: 0 auto;
   padding-top: 210px;
 }
-
+.hero-owl {
+  position: absolute;
+  top: 110px;
+  left: 63px;
+  width: 390px;
+  height: auto;
+  opacity: 0.04;
+  pointer-events: none;
+}
 .hero-logo {
   width: 430px;
   margin-bottom: 48px;
@@ -715,7 +724,9 @@ body {
   width: 240px;
   margin-bottom: 30px;
 }
-
+.hero-owl {
+  display: none;
+}
 .hero-title {
   font-size: 32px;
   line-height: 1.6;
