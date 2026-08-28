@@ -1022,3 +1022,146 @@ body {
 .service-price-link:hover {
   opacity: 0.6;
 }
+/* =========================
+   WORK DETAIL
+========================= */
+
+.work-detail {
+  color: #123f30;
+}
+
+.work-hero {
+  min-height: 60vh;
+  background: #f7f5ef;
+}
+
+.work-hero-inner {
+  width: min(1120px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.work-title {
+  margin: 48px 0 16px;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.work-category {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+.work-visual {
+  background: #fff;
+}
+
+.work-visual-inner {
+  width: min(1120px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.work-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.work-about {
+  background: #fff;
+  padding: 120px 0;
+}
+
+.work-about-inner {
+  width: min(1120px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.work-about-title {
+  margin: 48px 0 24px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
+
+.work-about-text {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+.work-info {
+  background: #f7f5ef;
+  padding: 96px 0;
+}
+
+.work-info-list {
+  margin-top: 48px;
+}
+
+.work-info-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(18, 64, 48, 0.2);
+}
+
+.work-info-item dt {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+.work-info-item dd {
+  margin: 0;
+  font-size: 14px;
+}
+.work-point {
+  background: #fff;
+  padding: 120px 0;
+}
+
+.work-point-title {
+  margin: 48px 0 24px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
+
+.work-point-text {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+.work-back {
+  background: #f7f5ef;
+  padding: 72px 0 96px;
+  text-align: center;
+}
+
+.work-back a {
+  color: #123f30;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(18, 64, 48, 0.4);
+  padding-bottom: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.work-back a:hover {
+  opacity: 0.6;
+}
+.works-link {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 60px;
+  align-items: end;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .work-point-title {
+    font-size: 30px;
+  }
+}
