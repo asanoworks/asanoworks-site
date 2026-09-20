@@ -25,3 +25,30 @@ if (hour === 4 && minute >= 20 && minute < 30) {
   redEyeRight.style.display = "none";
   owNight.style.display = "none";
 }
+// =========================
+// Autumn Leaf
+// =========================
+
+function createAutumnLeaf() {
+  const leaf = document.createElement("span");
+  leaf.classList.add("autumn-leaf");
+
+  const leaves = ["🍁", "🍂"];
+  leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+
+  // 横位置をランダムに
+  leaf.style.left = `${10 + Math.random() * 80}%`;
+
+  document.body.appendChild(leaf);
+
+  // 落下終了後に削除
+  setTimeout(() => {
+    leaf.remove();
+  }, 12000);
+}
+
+// 最初の1枚
+setTimeout(createAutumnLeaf, 2000);
+
+// その後、約15秒ごとに1枚
+setInterval(createAutumnLeaf, 25000);
