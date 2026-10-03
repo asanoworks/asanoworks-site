@@ -27,23 +27,9 @@ body {
   width: 100%;
   min-height: 75vh;
 
-  background-color: #faf9f5;
-
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(27, 59, 43, 0.015) 0,
-      rgba(27, 59, 43, 0.015) 1px,
-      transparent 1px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(27, 59, 43, 0.012) 0,
-      rgba(27, 59, 43, 0.012) 1px,
-      transparent 1px,
-      transparent 5px
-    );
+  background-image: url("../images/paper-texture.png");
+  background-repeat: repeat;
+  background-size: 1800px auto;
 
   overflow: hidden;
 }
@@ -107,6 +93,7 @@ z-index: 1;
 
 .hero-title {
   margin: 0 0 38px;
+  font-family: "hiragino-kaku-gothic-pron", sans-serif;
   font-size: 60px;
   font-weight: 300;
   letter-spacing: 0.12em;
