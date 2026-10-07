@@ -284,6 +284,22 @@ z-index: 1;
   letter-spacing: 0.08em;
 }
 
+.work-site-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.work-site-link:hover {
+  opacity: 0.5;
+}
+
 /* =========================
    ABOUT
 ========================= */
@@ -892,13 +908,25 @@ z-index: 1;
 
 .works-item {
   display: block;
+  width: 100%;
+}
+
+.works .works-link {
+  display: block;
+  width: 100%;
+  grid-template-columns: none;
 }
 
 .works-image {
   width: 100%;
-  height: auto;
-  display: block;
   margin-bottom: 28px;
+}
+
+.works-image img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
 }
 
 .works-info {
