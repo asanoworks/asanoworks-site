@@ -1369,3 +1369,42 @@ z-index: 1;
 }
 
 }
+/* Monthly support — price page only */
+.monthly-title { margin: 24px 0 0; font-size: 30px; font-weight: 300; line-height: 1.7; letter-spacing: .06em; }
+.monthly-plans { margin-top: 48px; }
+.monthly-plan { padding: 36px 0; border-top: 1px solid rgba(18,64,48,.18); }
+.monthly-plan-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px 32px; }
+.monthly-plan-head h3 { margin: 0; font-size: 20px; font-weight: 400; line-height: 1.7; }
+.monthly-plan-head .price-maintenance-amount { white-space: nowrap; }
+.monthly-plan-intro { margin: 20px 0 24px; font-size: 14px; line-height: 2; }
+.monthly-plan-details { margin: 0; font-size: 14px; line-height: 2; }
+.monthly-plan-details > div { display: grid; grid-template-columns: 80px minmax(0,1fr); gap: 16px; margin-top: 12px; }
+.monthly-plan-details dt { font-weight: 400; }
+.monthly-plan-details dd { margin: 0; }
+.monthly-terms { padding-top: 32px; border-top: 1px solid rgba(18,64,48,.18); }
+.monthly-terms h3 { margin: 0 0 16px; font-size: 15px; font-weight: 400; line-height: 1.8; }
+.monthly-terms p { margin: 12px 0 0; font-size: 13px; line-height: 2; }
+@media (min-width: 769px) and (max-width: 1279px) {
+  .price .section-inner { margin-left: 60px; margin-right: 60px; }
+}
+@media (max-width: 768px) {
+  .monthly-title { font-size: 26px; }
+  .monthly-plan-head { display: block; }
+  .monthly-plan-head h3 { margin-bottom: 12px; font-size: 18px; }
+  .monthly-plan-details > div { grid-template-columns: 1fr; gap: 4px; margin-top: 20px; }
+}
+@media (max-width: 374px) {
+  .price-option-item { flex-direction: column; gap: 8px; }
+  .price-option-item span:last-child { text-align: left; }
+}
+
+/* Tax-inclusive totals below the main prices */
+.price .price-tax {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+}

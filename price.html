@@ -54,14 +54,15 @@
         </h1>
       <p class="price-lead">
         ご相談内容に合わせて、必要なものを一緒に整理します。<br>
-        下記の料金は、制作費の目安としてご覧ください。
+        下記の料金は、制作費の目安としてご覧ください。主表示は税抜価格です。直下に消費税10%を含む税込総額を併記しています。
       </p>
       <div class="price-card">
   <div class="price-card-head">
     <p class="price-service">WEB DESIGN</p>
 
     <p class="price-amount">
-      <span>120,000</span>円〜
+      <span>150,000</span>円〜
+      <small class="price-tax">税込165,000円〜</small>
     </p>
   </div>
 
@@ -91,8 +92,8 @@
   </p>
 
   <p class="price-note">
-    ※ページ数・機能・素材の状況などにより料金は変動します。<br>
-    ヒアリング後に内容を整理し、お見積もりをご案内します。
+    ※表示価格は基本制作料金の目安です。<br>
+    ページ数だけでなく、各ページの内容・機能・素材の状況などを踏まえて、個別にお見積もりします。
   </p>
 
     </div> <!-- price-card -->
@@ -102,28 +103,33 @@
 
       <div class="price-option-list">
         <div class="price-option-item">
-          <span>追加ページ制作</span>
-          <span>15,000円〜 / 1ページ</span>
+          <span>追加ページ制作（既存デザイン流用）</span>
+          <span>15,000円〜 / 1ページ<small class="price-tax">税込16,500円〜 / 1ページ</small></span>
         </div>
 
         <div class="price-option-item">
-          <span>WordPress導入</span>
-          <span>50,000円〜</span>
+          <span>追加ページ制作（新規デザイン）</span>
+          <span>30,000円〜 / 1ページ<small class="price-tax">税込33,000円〜 / 1ページ</small></span>
         </div>
 
         <div class="price-option-item">
-          <span>ブログ・お知らせ機能</span>
-          <span>30,000円〜</span>
+          <span>WordPress導入・初期設定</span>
+          <span>50,000円〜<small class="price-tax">税込55,000円〜</small></span>
+        </div>
+
+        <div class="price-option-item">
+          <span>ブログ・お知らせ機能の追加</span>
+          <span>30,000円〜<small class="price-tax">税込33,000円〜</small></span>
         </div>
 
         <div class="price-option-item">
           <span>ロゴ制作</span>
-          <span>30,000円〜</span>
+          <span>50,000円〜<small class="price-tax">税込55,000円〜</small></span>
         </div>
 
         <div class="price-option-item">
           <span>バナー・画像制作</span>
-          <span>5,000円〜 / 1点</span>
+          <span>5,000円〜 / 1点<small class="price-tax">税込5,500円〜 / 1点</small></span>
         </div>
 
         <div class="price-option-item">
@@ -143,25 +149,64 @@
       </div>
     </section>
 
-    <section class="price-maintenance">
-    <div class="price-maintenance-head">
-       <p class="price-maintenance-label">MAINTENANCE</p>
-
-       <p class="price-maintenance-amount">
-        <span>5,500</span>円〜 / 月
-       </p>
-    </div>
-
-  <p class="price-maintenance-description">
-    公開後の更新や管理もご相談いただけます。<br>
-    軽微な文章・画像変更、サイトの状態確認など、<br>
-    必要な内容に合わせて保守プランをご提案します。
-  </p>
-
-  <p class="price-maintenance-note">
-    ※大きな修正やページ追加については、別途お見積もりとなります。
-  </p>
-</section>
+    <section class="price-maintenance" aria-labelledby="monthly-title">
+      <p class="price-maintenance-label">MONTHLY SUPPORT</p>
+      <h2 id="monthly-title" class="monthly-title">公開後も、一歩ずつ。</h2>
+      <p class="price-maintenance-description">サイトを維持するところから、解析・改善・集客戦略まで。<br>
+        事業の状況と目的に合わせて、必要なサポートを選べます。<br>
+        上位プランには、下位プランのサポート内容がすべて含まれます。</p>
+      <div class="monthly-plans">
+        <article class="monthly-plan" aria-labelledby="monthly-plan-1">
+          <div class="monthly-plan-head">
+            <h3 id="monthly-plan-1">Web保守</h3>
+            <p class="price-maintenance-amount"><span>10,000</span>円（税別） / 月<small class="price-tax">税込11,000円 / 月</small></p>
+          </div>
+          <p class="monthly-plan-intro">サイトを安心して使い続けるために。</p>
+          <dl class="monthly-plan-details">
+            <div><dt>対応範囲</dt><dd>サイトの表示・動作確認、軽微な文章・画像の更新。</dd></div>
+            <div><dt>ご提供内容</dt><dd>サイトの確認結果と更新・対応内容のご報告。</dd></div>
+          </dl>
+        </article>
+        <article class="monthly-plan" aria-labelledby="monthly-plan-2">
+          <div class="monthly-plan-head">
+            <h3 id="monthly-plan-2">保守＋月次解析レポート</h3>
+            <p class="price-maintenance-amount"><span>30,000</span>円（税別） / 月<small class="price-tax">税込33,000円 / 月</small></p>
+          </div>
+          <p class="monthly-plan-intro">サイトの現状を知り、次の一手を見つける。</p>
+          <dl class="monthly-plan-details">
+            <div><dt>対応範囲</dt><dd>Web保守の全内容に加え、GA4・Search Console・Clarityを活用したアクセス状況、検索状況、ユーザー行動の分析。</dd></div>
+            <div><dt>ご提供内容</dt><dd>月次解析レポートと、データに基づく改善提案。サイトの課題や可能性を整理し、次に取り組むべきことをわかりやすくご報告します。</dd></div>
+          </dl>
+        </article>
+        <article class="monthly-plan" aria-labelledby="monthly-plan-3">
+          <div class="monthly-plan-head">
+            <h3 id="monthly-plan-3">集客改善サポート</h3>
+            <p class="price-maintenance-amount"><span>50,000</span>円（税別） / 月<small class="price-tax">税込55,000円 / 月</small></p>
+          </div>
+          <p class="monthly-plan-intro">分析から実行へ。改善を積み重ねる。</p>
+          <dl class="monthly-plan-details">
+            <div><dt>対応範囲</dt><dd>保守＋月次解析レポートの全内容に加え、分析結果をもとに優先順位を整理し、お客様と合意した改善施策を実施します。</dd></div>
+            <div><dt>ご提供内容</dt><dd>月次解析レポート・改善提案に加え、実施した改善内容とその結果をご報告します。</dd></div>
+          </dl>
+        </article>
+        <article class="monthly-plan" aria-labelledby="monthly-plan-4">
+          <div class="monthly-plan-head">
+            <h3 id="monthly-plan-4">Web集客パートナー</h3>
+            <p class="price-maintenance-amount"><span>100,000</span>円（税別） / 月<small class="price-tax">税込110,000円 / 月</small></p>
+          </div>
+          <p class="monthly-plan-intro">事業の目標から、一緒に考え、育てていく。</p>
+          <dl class="monthly-plan-details">
+            <div><dt>対応範囲</dt><dd>集客改善サポートの全内容に加え、事業の目標に合わせた集客戦略の立案、定例ミーティング、施策の振り返りと継続的な改善。</dd></div>
+            <div><dt>ご提供内容</dt><dd>目標と集客戦略の整理、定例ミーティングでの進捗共有、実施施策の振り返りと次の改善方針をご報告します。</dd></div>
+          </dl>
+        </article>
+      </div>
+      <div class="monthly-terms">
+        <h3>対応範囲・別途費用について</h3>
+        <p>各プランの具体的な対応内容・作業範囲は、ご契約前にご相談のうえ決定します。大規模改修・リニューアル・ページ追加・新機能開発など、プランの対応範囲を超える制作や作業は別途お見積もりとなります。</p>
+        <p>広告費、サーバー・ドメイン費、有料ツールの利用料などの外部費用は月額料金に含まれません。必要な作業・外部費用は事前に整理し、別途お見積もり・ご案内します。</p>
+      </div>
+    </section>
 <section class="price-contact">
   <p class="price-contact-label">CONTACT</p>
 
@@ -172,13 +217,12 @@
 
   <p class="price-contact-text">
     まだ内容が決まっていなくても大丈夫です。<br>
-    「こんなサイトを作りたい」から、一緒に整理していきます。
+    やりたいことから、一緒に整理していきましょう。
   </p>
 
   <a href="index.html#contact" class="price-contact-link">
   お問い合わせ →
 </a>
-  </a>
 </section>
 
 <div class="price-payment">
