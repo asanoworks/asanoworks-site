@@ -28,6 +28,7 @@
   <title>asanoworks | Web制作・デザイン</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/paper.css">
   <script>
   (function(d) {
     var config = {
@@ -53,6 +54,12 @@
 
     <section class="hero" id="top">
   <div class="hero-inner">
+
+    <div class="dayt-clock" hidden>
+      <time class="dayt-time" aria-label="現在時刻"><span class="dayt-hours-minutes" aria-hidden="true"></span><span class="dayt-seconds" aria-hidden="true"></span></time>
+      <span class="dayt-divider" aria-hidden="true"></span>
+      <time class="dayt-date"></time>
+    </div>
 
     <div class="hero-logo">
       <img
@@ -161,7 +168,7 @@
 
     <article class="works-item">
       <a href="works-rhombus.html" class="works-link">
-      <div class="works-image">
+      <div class="works-image works-image--rhombus">
         <img
           src="images/atelier-rhombus-profile.jpg"
           alt="atelier Rhombus Webサイト制作"
@@ -317,6 +324,7 @@
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/dayt.js"></script>
 </body>
 
 </html>
