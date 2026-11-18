@@ -25,13 +25,16 @@ body {
   position: relative;
   width: 100%;
   min-height: 75vh;
+  overflow: hidden;
+}
 
+.hero,
+.home-content + .site-footer {
+  background-color: transparent;
   background-image: url("../images/paper-texture.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  overflow: hidden;
 }
 
 .hero-inner {
@@ -242,6 +245,21 @@ z-index: 1;
    WORKS
 ===================== */
 
+.home-content,
+.price {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url("../images/japanese-paper_00478.jpg");
+  background-size: auto, 1440px auto;
+  background-position: center, center top;
+  background-repeat: no-repeat, repeat;
+}
+
+.home-content > :is(.introduction, .service, .works, .about, .flow, .contact) {
+  background: transparent;
+}
+
 .works .section-inner {
   padding: 180px 0;
   margin-left: 410px;
@@ -272,6 +290,24 @@ z-index: 1;
   height: auto;
 }
 
+.works-image-sasaki {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-color: #faf7f2;
+}
+
+.works-image.works-image-sasaki img {
+  position: absolute;
+  top: 50%;
+  left: 49.4%;
+  width: 148%;
+  aspect-ratio: auto;
+  /* Keep the homepage hero in view without the navigation row. */
+  clip-path: inset(12% 0 10%);
+  transform: translate(-50%, -50%);
+}
+
 /* The 2048px square source has a 2048 x 1536 photo starting at y=261.
    Hide only its embedded mint bands; keep the photo at its natural ratio. */
 .works-image--rhombus {
@@ -292,6 +328,12 @@ z-index: 1;
   font-size: 28px;
   font-weight: 300;
   letter-spacing: 0.08em;
+}
+
+.works-item + .works-item {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(18, 64, 48, 0.2);
 }
 
 .works-info p {
@@ -1154,10 +1196,6 @@ z-index: 1;
   color: #123f30;
 }
 
-.work-hero {
-  min-height: 60vh;
-}
-
 .work-hero-inner {
   width: min(1120px, calc(100% - 80px));
   margin: 0 auto;
@@ -1172,6 +1210,7 @@ z-index: 1;
 }
 
 .work-category {
+  margin-bottom: 0;
   font-size: 13px;
   letter-spacing: 0.14em;
 }
@@ -1207,6 +1246,7 @@ z-index: 1;
   line-height: 2;
   letter-spacing: 0.04em;
 }
+
 .work-info {
   padding: 96px 0;
 }
@@ -1231,6 +1271,19 @@ z-index: 1;
   margin: 0;
   font-size: 14px;
 }
+
+.work-credit-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: opacity 0.3s ease;
+}
+
+.work-credit-link:hover {
+  opacity: 0.6;
+}
 .work-point {
   padding: 120px 0;
 }
@@ -1251,6 +1304,14 @@ z-index: 1;
 .work-back {
   padding: 72px 0 96px;
   text-align: center;
+}
+
+.work-closing > .work-point {
+  padding-block-start: 96px;
+}
+
+.work-closing > .work-back {
+  padding-block-start: 56px;
 }
 
 .work-back a {
@@ -1278,6 +1339,68 @@ z-index: 1;
 @media (max-width: 600px) {
   .work-point-title {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-detail .work-hero-inner,
+  .work-detail .work-about-inner {
+    width: calc(100% - 48px);
+  }
+
+  .work-detail .work-hero-inner,
+  .work-detail .work-about,
+  .work-detail .work-info,
+  .work-detail .work-point {
+    padding-block: 72px;
+  }
+
+  .work-detail .work-closing > .work-point {
+    padding-block-start: 56px;
+  }
+
+  .work-detail .section-label {
+    margin-bottom: 24px;
+  }
+
+  .work-detail .work-title,
+  .work-detail .work-about-title,
+  .work-detail .work-info-list,
+  .work-detail .work-point-title {
+    margin-top: 24px;
+  }
+
+  .work-detail .work-title {
+    font-size: clamp(30px, 9vw, 48px);
+  }
+
+  .work-detail-sasaki .work-title {
+    font-size: clamp(36px, 12vw, 48px);
+  }
+
+  .work-detail .work-about-title,
+  .work-detail .work-point-title {
+    line-height: 1.6;
+  }
+
+  .work-detail .work-about-title {
+    font-size: clamp(19px, 5.8vw, 30px);
+  }
+
+  .work-detail .work-point-title {
+    font-size: clamp(22px, 6.4vw, 30px);
+  }
+
+  .work-detail .work-info-item {
+    grid-template-columns: 76px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: baseline;
+  }
+
+  .work-detail .work-info-item dd {
+    font-size: 14px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
   }
 }
 
