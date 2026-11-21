@@ -56,34 +56,39 @@
 .winter-snow span {
   position: absolute;
   top: -8px;
-  width: 4px;
-  height: 4px;
+  left: var(--x);
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 2px #697d8359;
+  box-shadow: 0 0 2px #69818a50;
   opacity: 0;
   animation: winter-snowfall var(--duration) linear var(--delay) infinite;
 }
 
-.winter-snow span:nth-child(1) { left: 12%; --duration: 27s; --delay: -8s; }
-.winter-snow span:nth-child(2) { left: 28%; --duration: 32s; --delay: -22s; }
-.winter-snow span:nth-child(3) { left: 46%; --duration: 28s; --delay: -17s; }
-.winter-snow span:nth-child(4) { left: 61%; --duration: 35s; --delay: -10s; }
-.winter-snow span:nth-child(5) { left: 77%; --duration: 31s; --delay: -24s; }
-.winter-snow span:nth-child(6) { left: 91%; --duration: 29s; --delay: -6s; }
-.winter-snow span:nth-child(7) { left: 35%; --duration: 32s; --delay: -29s; }
-.winter-snow span:nth-child(8) { left: 19%; --duration: 28s; --delay: -14s; }
-.winter-snow span:nth-child(9) { left: 87%; --duration: 29s; --delay: -12s; }
-.winter-snow span:nth-child(10) { left: 69%; --duration: 31s; --delay: -3s; }
+.winter-snow span:nth-child(1) { --x: 12%; --size: 2px; --duration: 38s; --delay: -11s; --drift: 17px; --alpha: .70; }
+.winter-snow span:nth-child(2) { --x: 23%; --size: 3px; --duration: 31s; --delay: -23s; --drift: -26px; --alpha: .70; }
+.winter-snow span:nth-child(3) { --x: 37%; --size: 3px; --duration: 32s; --delay: -17s; --drift: -22px; --alpha: .75; }
+.winter-snow span:nth-child(4) { --x: 49%; --size: 2px; --duration: 43s; --delay: -13s; --drift: 25px; --alpha: .60; }
+.winter-snow span:nth-child(5) { --x: 61%; --size: 2.5px; --duration: 44s; --delay: -31s; --drift: 24px; --alpha: .74; }
+.winter-snow span:nth-child(6) { --x: 70%; --size: 2px; --duration: 41s; --delay: -27s; --drift: 16px; --alpha: .63; }
+.winter-snow span:nth-child(7) { --x: 79%; --size: 3.5px; --duration: 36s; --delay: -8s; --drift: -19px; --alpha: .78; }
+.winter-snow span:nth-child(8) { --x: 87%; --size: 3px; --duration: 35s; --delay: -15s; --drift: 21px; --alpha: .67; }
+.winter-snow span:nth-child(9) { --x: 92%; --size: 2px; --duration: 34s; --delay: -25s; --drift: -15px; --alpha: .66; }
+.winter-snow span:nth-child(10) { --x: 96%; --size: 2px; --duration: 39s; --delay: -19s; --drift: -18px; --alpha: .62; }
 
 @keyframes winter-snowfall {
-  12%, 83% { opacity: 0.65; }
-  100% { opacity: 0; transform: translate(14px, calc(100cqh + 10px)); }
+  0% { transform: translate(0, 0); opacity: 0; }
+  14% { opacity: var(--alpha); }
+  36% { transform: translate(var(--drift), 36cqh); }
+  69% { transform: translate(calc(var(--drift) * .3), 69cqh); }
+  83% { opacity: var(--alpha); }
+  100% { transform: translate(var(--drift), calc(100cqh + 10px)); opacity: 0; }
 }
 
-@media (max-width: 768px) { .winter-snow span:nth-child(even) { display: none; } }
-@media (prefers-reduced-motion: reduce) { .winter-snow { display: none; } }
-
+@media (max-width: 768px) {
+  .winter-snow span:nth-child(even) { display: none; }
+}
 /* Give the decoration room below the existing wrapped desktop copy. */
 @media (769px <= width <= 1150px) {
   .hero.is-winter .hero-inner {
@@ -101,7 +106,8 @@
   }
 
   .hero.is-winter .winter-hero {
-    background: url("../images/winter-hero-bg.png") right top / auto max(120vh, 56.35vw) no-repeat;
+    --winter-background-height: max(120vh, 56.35vw);
+    background: url("../images/winter-hero-bg.png") right top / auto var(--winter-background-height) no-repeat;
   }
 
   .hero.is-winter .winter-ridge,
@@ -116,7 +122,7 @@
     content: "";
     position: absolute;
     inset: auto 0 0;
-    height: clamp(280px, 80vw, 330px);
+    height: var(--winter-background-height);
     background: url("../images/winter-hero-bg.png") right bottom / auto 100% no-repeat;
     mask-image: linear-gradient(to bottom, transparent, #000 36px);
   }
@@ -130,5 +136,71 @@
 @media (max-width: 320px) {
   .hero.is-winter .hero-title {
     font-size: 27.5px;
+  }
+}
+@keyframes winter-lamp-glow {
+  0%, 100% { opacity: .33; }
+  24% { opacity: .64; }
+  41% { opacity: .43; }
+  67% { opacity: .59; }
+  83% { opacity: .37; }
+}
+
+/* The flame is at (1487, 416) in the 1670 × 941 artwork.
+   The right offset uses its distance from the image's right edge. */
+.hero.is-winter .winter-hero::after {
+  content: "";
+  display: none;
+  position: absolute;
+  right: calc(var(--winter-background-height) * 183 / 941);
+  width: calc(var(--winter-background-height) * .12);
+  height: calc(var(--winter-background-height) * .14);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #ffdf8c80 0%, #ffb75147 26%, #f69a2817 49%, transparent 70%);
+  animation: winter-lamp-glow 7.4s ease-in-out infinite;
+}
+
+@media (min-width: 1280px) {
+  .hero.is-winter .winter-hero::after {
+    display: block;
+    top: calc(var(--winter-background-height) * 416 / 941);
+    transform: translate(50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.is-winter .winter-hero {
+    --winter-background-height: clamp(280px, 80vw, 330px);
+  }
+
+  .hero.is-winter .winter-hero::after {
+    display: block;
+    bottom: calc(var(--winter-background-height) * 525 / 941);
+    transform: translate(50%, 50%);
+  }
+}
+
+/* Intermediate desktop widths use the site's existing standalone lamp. */
+@media (769px <= width < 1280px) {
+  .hero.is-winter .winter-lamp::after {
+    content: "";
+    position: absolute;
+    left: 64%;
+    top: 30%;
+    width: 28%;
+    height: 24%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(ellipse, #ffdf8c80, #ffb75147 30%, transparent 70%);
+    animation: winter-lamp-glow 7.4s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero.is-winter .winter-snow,
+  .hero.is-winter .winter-hero::after,
+  .hero.is-winter .winter-lamp::after {
+    display: none;
+    animation: none;
   }
 }
