@@ -28,6 +28,7 @@
   <title>asanoworks | Web制作・デザイン</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/winter-hero.css">
   <script>
   (function(d) {
     var config = {
@@ -52,6 +53,45 @@
   <main>
 
     <section class="hero" id="top">
+  <div class="winter-hero" aria-hidden="true" hidden>
+    <picture>
+      <source media="(min-width: 1280px)" srcset="images/nanatsumori-ridge-desktop.svg">
+      <img class="winter-ridge" src="images/nanatsumori-ridge.svg" alt="">
+    </picture>
+    <div class="winter-lamp">
+      <svg viewBox="0 0 1024 1536">
+        <defs>
+          <mask id="winter-lamp-mask" maskUnits="userSpaceOnUse" width="1024" height="1536">
+            <rect width="1024" height="1536" fill="white"/>
+            <use href="#winter-branch-region" fill="black"/>
+          </mask>
+        </defs>
+        <image href="images/a_highly_detailed_isolated_png_style_illustration.png"
+               width="1024" height="1536" mask="url(#winter-lamp-mask)"/>
+      </svg>
+    </div>
+    <div class="winter-branches">
+      <svg viewBox="0 0 1024 1536">
+        <defs>
+          <!-- The source illustration contains both the lamp and the foreground branches. -->
+          <path id="winter-branch-region" d="M748 910H1024V1536H724V1470L705 1464
+            Q655 1452 609 1444 L584 1452H340V1180H610V1313
+            L635 1339 664 1368 704 1390 731 1400 736 1350 711 1320
+            675 1296 680 1275 710 1285 735 1302V1100Z"/>
+          <clipPath id="winter-branch-clip">
+            <use href="#winter-branch-region"/>
+          </clipPath>
+        </defs>
+        <image href="images/a_highly_detailed_isolated_png_style_illustration.png"
+               width="1024" height="1536" clip-path="url(#winter-branch-clip)"/>
+      </svg>
+    </div>
+    <div class="winter-snow">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
   <div class="hero-inner">
 
     <div class="dayt-clock" hidden>

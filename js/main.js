@@ -47,8 +47,13 @@ function createAutumnLeaf() {
   }, 12000);
 }
 
-// 最初の1枚
-setTimeout(createAutumnLeaf, 2000);
+const winterHero = document.querySelector(".winter-hero");
+const season = new URLSearchParams(window.location.search).get("season");
 
-// その後、約15秒ごとに1枚
-setInterval(createAutumnLeaf, 25000);
+if (winterHero && season !== "autumn") {
+  winterHero.closest(".hero").classList.add("is-winter");
+  winterHero.hidden = false;
+} else {
+  setTimeout(createAutumnLeaf, 2000);
+  setInterval(createAutumnLeaf, 25000);
+}

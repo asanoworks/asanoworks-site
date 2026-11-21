@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 90" preserveAspectRatio="none">
+  <defs>
+    <path id="outline" d="M0 63 Q9 62 16 58 L25 52 Q32 39 43 32 Q53 20 59 18 T72 11 Q86 11 97 24 L105 34 Q120 41 130 52 L149 61 L157 56 L165 49 Q178 37 186 23 Q193 19 204 21 Q219 21 231 34 L234 39 Q243 31 253 33 L263 26 Q277 17 293 14 Q298 13 302 17 L313 29 Q321 31 329 38 L344 50 L353 41 Q362 34 367 24 Q375 19 384 23 L397 30 Q414 36 424 47 L430 54 Q438 52 444 44 Q464 29 473 27 Q485 30 496 46 L502 41 Q513 36 523 30 Q531 27 540 32 L553 38 L563 41 Q574 41 579 51 Q587 47 600 49 V90 H0Z"/>
+    <clipPath id="slope"><use href="#outline"/></clipPath>
+    <linearGradient id="fade" x2="0" y2="1">
+      <stop offset=".44" stop-color="white"/>
+      <stop offset=".78" stop-color="#d0d0d0"/>
+      <stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <mask id="foot-mist" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="90">
+      <path d="M0 0H600V90H0Z" fill="url(#fade)"/>
+    </mask>
+    <linearGradient id="mountains" x2=".07" y2="1">
+      <stop stop-color="#728896" stop-opacity=".73"/>
+      <stop offset=".58" stop-color="#96aab3" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#afbdc3" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="near" x2="0" y2="1">
+      <stop stop-color="#6b8793" stop-opacity=".47"/>
+      <stop offset="1" stop-color="#a2b6be" stop-opacity=".10"/>
+    </linearGradient>
+    <linearGradient id="haze" x2="0" y2="1">
+      <stop stop-color="#e8e5df" stop-opacity="0"/>
+      <stop offset=".52" stop-color="#e8e5df" stop-opacity=".57"/>
+      <stop offset="1" stop-color="#e8e5df" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".45 .53" numOctaves="3" seed="13"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 .87  0 0 0 0 .91  0 0 0 0 .92  .43 .31 .22 0 -.31"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+  </defs>
+  <g mask="url(#foot-mist)">
+    <use href="#outline" fill="url(#mountains)"/>
+    <g clip-path="url(#slope)">
+      <path fill="#637e8d" opacity=".16" d="M72 11Q85 17 98 32T150 67Q113 54 84 56T22 67Q58 44 72 11ZM204 21Q218 32 237 55T283 74Q235 63 184 71Q201 47 204 21ZM294 14Q306 28 331 47T377 67Q331 59 304 69Q314 53 294 14ZM375 22Q397 29 425 48T466 67Q430 58 393 71Q392 45 375 22ZM474 27Q488 34 504 53T558 74Q508 66 476 72Q490 54 474 27Z" filter="url(#soft)"/>
+      <path fill="#819aa8" opacity=".30" d="M0 62Q36 56 61 61T114 62Q148 65 179 60T225 57Q246 54 266 60T315 62Q366 56 405 62T469 57Q494 58 527 60T600 57V90H0Z" filter="url(#soft)"/>
+      <path fill="url(#near)" d="M0 69Q23 64 47 66T95 70Q122 73 145 70T201 67Q232 62 255 68T310 72Q337 71 363 69T405 72Q446 75 474 69T522 69Q557 73 600 67V90H0Z"/>
+      <rect width="600" height="90" filter="url(#grain)" opacity=".48"/>
+      <path fill="url(#haze)" d="M0 70Q59 66 105 73T201 73Q245 68 297 74T400 75Q462 70 521 74T600 72V90H0Z" filter="url(#soft)"/>
+    </g>
+  </g>
+</svg>

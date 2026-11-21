@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 90" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="mist" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#778d99" stop-opacity=".69"/>
+      <stop offset=".63" stop-color="#879ca7" stop-opacity=".47"/>
+      <stop offset="1" stop-color="#a6b7bf" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#mist)" d="M0 63 Q9 62 16 58 L25 52 Q32 39 43 32 Q53 20 59 18 T72 11 Q86 11 97 24 L105 34 Q120 41 130 52 L149 61 L157 56 L165 49 Q178 37 186 23 Q193 19 204 21 Q219 21 231 34 L234 39 Q243 31 253 33 L263 26 Q277 17 293 14 Q298 13 302 17 L313 29 Q321 31 329 38 L344 50 L353 41 Q362 34 367 24 Q375 19 384 23 L397 30 Q414 36 424 47 L430 54 Q438 52 444 44 Q464 29 473 27 Q485 30 496 46 L502 41 Q513 36 523 30 Q531 27 540 32 L553 38 L563 41 Q574 41 579 51 Q587 47 600 49 V90 H0Z"/>
+</svg>

@@ -1,0 +1,134 @@
+.hero.is-winter .autumn-deco {
+  display: none;
+}
+
+.winter-hero {
+  --winter-art-height: min(60%, 38vw, 520px);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.winter-ridge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(70px, 10.5vw, 165px);
+}
+
+.winter-lamp,
+.winter-branches {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: var(--winter-art-height);
+  aspect-ratio: 2 / 3;
+}
+
+.winter-lamp svg,
+.winter-branches svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.winter-lamp::before {
+  content: "";
+  position: absolute;
+  inset: 8% 5% 48% 19%;
+  background: radial-gradient(ellipse, #f7ba62a6, #f4bc6c3b 42%, transparent 72%);
+}
+
+@media (max-width: 768px) {
+  .winter-hero {
+    --winter-art-height: clamp(215px, 55vw, 345px);
+  }
+}
+.winter-snow {
+  position: absolute;
+  inset: 0;
+  container-type: size;
+}
+
+.winter-snow span {
+  position: absolute;
+  top: -8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 2px #697d8359;
+  opacity: 0;
+  animation: winter-snowfall var(--duration) linear var(--delay) infinite;
+}
+
+.winter-snow span:nth-child(1) { left: 12%; --duration: 27s; --delay: -8s; }
+.winter-snow span:nth-child(2) { left: 28%; --duration: 32s; --delay: -22s; }
+.winter-snow span:nth-child(3) { left: 46%; --duration: 28s; --delay: -17s; }
+.winter-snow span:nth-child(4) { left: 61%; --duration: 35s; --delay: -10s; }
+.winter-snow span:nth-child(5) { left: 77%; --duration: 31s; --delay: -24s; }
+.winter-snow span:nth-child(6) { left: 91%; --duration: 29s; --delay: -6s; }
+.winter-snow span:nth-child(7) { left: 35%; --duration: 32s; --delay: -29s; }
+.winter-snow span:nth-child(8) { left: 19%; --duration: 28s; --delay: -14s; }
+.winter-snow span:nth-child(9) { left: 87%; --duration: 29s; --delay: -12s; }
+.winter-snow span:nth-child(10) { left: 69%; --duration: 31s; --delay: -3s; }
+
+@keyframes winter-snowfall {
+  12%, 83% { opacity: 0.65; }
+  100% { opacity: 0; transform: translate(14px, calc(100cqh + 10px)); }
+}
+
+@media (max-width: 768px) { .winter-snow span:nth-child(even) { display: none; } }
+@media (prefers-reduced-motion: reduce) { .winter-snow { display: none; } }
+
+/* Give the decoration room below the existing wrapped desktop copy. */
+@media (769px <= width <= 1150px) {
+  .hero.is-winter .hero-inner {
+    padding-bottom: 120px;
+  }
+
+  .winter-hero {
+    --winter-art-height: min(45%, 31vw);
+  }
+}
+/* The adopted artwork supplies the scenery for the wide desktop preview. */
+@media (min-width: 1280px) {
+  .hero.is-winter {
+    min-height: 100vh;
+  }
+
+  .hero.is-winter .winter-hero {
+    background: url("../images/winter-hero-bg.png") right top / auto max(120vh, 56.35vw) no-repeat;
+  }
+
+  .hero.is-winter .winter-ridge,
+  .hero.is-winter .winter-lamp,
+  .hero.is-winter .winter-branches {
+    display: none;
+  }
+}
+/* Keep the adopted scenery below the existing mobile copy. */
+@media (max-width: 768px) {
+  .hero.is-winter .winter-hero::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: clamp(280px, 80vw, 330px);
+    background: url("../images/winter-hero-bg.png") right bottom / auto 100% no-repeat;
+    mask-image: linear-gradient(to bottom, transparent, #000 36px);
+  }
+
+  .hero.is-winter .winter-ridge,
+  .hero.is-winter .winter-lamp,
+  .hero.is-winter .winter-branches {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .hero.is-winter .hero-title {
+    font-size: 27.5px;
+  }
+}
